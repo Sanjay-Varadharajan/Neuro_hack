@@ -1,1 +1,116 @@
-abc
+soc-security operation center
+
+ours
+-reduce the need of soc 
+
+
+role
+clear definition of problem
+tech stack
+suggestion of our ai model(and other contents)
+
+
+
+
+# tech stack
+frontend->HTML5
+
+CSS3
+
+Vanilla JavaScript
+
+Fetch API
+
+
+backend->2. Backend
+
+Spring Boot (Java)
+
+JavaMail API (IMAP protocol)
+
+Spring Scheduler(run task automatically,no need to hit endpoint manually)
+
+REST APIs
+
+spring data jpa
+
+db->mysql
+
+Email Integration->
+
+IMAP Protocol (imap.gmail.com, Port 993)->(standard email protocol used to read emails from a mail server.)
+
+Gmail App Password Authentication
+
+JavaMail API(Connect to email servers,Open mail folders,Read email messages,Search for unread emails,Extract content)
+
+
+
+
+
+
+Innovation
+1️⃣ Extra Security Layer
+
+Normally:
+
+Gmail filters spam automatically.
+
+User never sees how it decides.
+
+Your system:
+
+Adds a second AI check.
+
+Independently scans emails.
+
+Shows the result clearly.
+
+So it’s like a second security guard watching the inbox.
+
+2️⃣ Full Transparency
+
+Gmail just says “Spam”.
+
+Your system shows:
+
+Fraud or Safe
+
+Confidence percentage
+
+Stored history
+
+Dashboard analytics
+
+Users can actually see what’s happening.
+
+3️⃣ Automated Monitoring
+
+No manual checking.
+No button clicking.
+
+It:
+
+Scans inbox automatically
+
+Classifies emails
+
+Stores results
+
+Updates dashboard
+
+That automation + AI combo is your strength.
+
+4️⃣ Lightweight & Customizable
+
+Big companies use heavy, expensive systems.
+
+Yours:
+
+Uses a simple ML model
+
+Can be trained on custom data
+
+Can be deployed easily
+
+
