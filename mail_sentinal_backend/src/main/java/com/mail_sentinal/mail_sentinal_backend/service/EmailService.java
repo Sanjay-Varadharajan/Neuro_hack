@@ -121,7 +121,7 @@
                             "Subject: " + email.getMailSubject() + "\n" +
                             "Confidence: " + result.getConfidence() + "\n" +
                             "Threat: "+" confirmation";
-                    smsService.sendSms("+917598077190", smsBody);
+                    smsService.sendSms("+916369126386", smsBody);
                 }
 
             } catch (Exception e) {
