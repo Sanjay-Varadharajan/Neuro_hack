@@ -19,6 +19,8 @@ public class EmailProcessingService {
     private final MLServiceClient mlServiceClient;
     private final FraudResultRepository fraudResultRepository;
 
+
+
     public void processLatestEmails() {
 
         List<Email> emails = emailRepository.findTop60ByOrderByMailReceivedAtDesc();

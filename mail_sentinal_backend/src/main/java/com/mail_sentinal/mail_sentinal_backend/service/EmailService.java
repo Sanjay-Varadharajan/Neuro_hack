@@ -6,6 +6,7 @@
     import com.mail_sentinal.mail_sentinal_backend.repository.EmailRepository;
     import com.mail_sentinal.mail_sentinal_backend.repository.FraudResultRepository;
     import com.mail_sentinal.mail_sentinal_backend.sms.SmsService;
+    import com.mail_sentinal.mail_sentinal_backend.telegramservice.TelegramService;
     import lombok.RequiredArgsConstructor;
     import org.springframework.beans.factory.annotation.Value;
     import org.springframework.stereotype.Service;
@@ -33,6 +34,9 @@
         private final MLServiceClient mlServiceClient;
 
         private final SmsService smsService;
+
+        private final TelegramService telegramService;
+
 
 
         @Value("${gmail.username}")
@@ -122,6 +126,15 @@
                             "Confidence: " + result.getConfidence() + "\n" +
                             "Threat: "+" confirmation";
                     smsService.sendSms("+916369126386", smsBody);
+
+
+                            String telegramBody = "⚠ Suspicious Email!\n" +
+                                    "From: " + email.getSenderMail() + "\n" +
+                                    "Subject: " + email.getMailSubject() + "\n" +
+                                    "Confidence: " + result.getConfidence() + "\n" +
+                                    "Threat: "+" confirmation";
+                            telegramService.sendMessage(telegramBody);
+
                 }
 
             } catch (Exception e) {

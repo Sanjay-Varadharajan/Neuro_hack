@@ -11,9 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableAsync
 public class MailSentinalBackendApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(MailSentinalBackendApplication.class, args);
 	}
-
 }

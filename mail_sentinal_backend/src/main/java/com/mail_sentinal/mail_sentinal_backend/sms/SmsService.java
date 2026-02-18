@@ -2,6 +2,7 @@ package com.mail_sentinal.mail_sentinal_backend.sms;
 
 
 import com.twilio.type.PhoneNumber;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
@@ -24,6 +25,11 @@ public class SmsService {
     @Value("${twilio.phone.number}")
     private String FROM_NUMBER;
 
+
+    @PostConstruct
+    public void initTwilio() {
+        Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
+    }
 
 
 
